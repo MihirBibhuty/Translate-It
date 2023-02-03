@@ -72,7 +72,7 @@ const TranslateIt = () => {
                                 value={inputText}
                                 spellCheck="false"
                                 className="form-text"
-                                placeholder="Enter text"
+                                placeholder="Enter your text here..."
                                 onChange={(e) => setInputText(e.target.value)}
                             />
                             <textarea
@@ -80,7 +80,7 @@ const TranslateIt = () => {
                                 readOnly
                                 disabled
                                 className="to-text"
-                                placeholder="Translation"
+                                placeholder="Translation of your text..."
                                 value={resultText}
                             />
                         </div>
