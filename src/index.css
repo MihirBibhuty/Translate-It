@@ -13,7 +13,7 @@ body{
     justify-content: center;
     padding: 0 10px;
     min-height: 100vh;
-    background: #ffc107;
+    background: #212529;
 }
 .micBox{
     text-align: center;
@@ -22,18 +22,22 @@ body{
 .micBox p{
     font-size: 1.5rem;
     margin-bottom: 2rem;
+    color: #c4cfde;
 }
 .mic{
     cursor: pointer;
     display: inline;
     padding: 20px 25px;
-    border: 4px solid black;
+    border: 4px solid #f9004d;
     border-radius: 50%;
-    background-color: #f1b500;
 }
 .mic:hover{
     /* box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); */
-    background-color: #ffd75d;
+    border-width: 6px;
+}
+
+.mic:hover > i{
+    transform: scale(1.5);
 }
 
 form{
@@ -48,21 +52,21 @@ form{
     max-width: 800px;
     width: 100%;
     padding: 30px;
-    background: #fff;
+    background: linear-gradient(145deg, #1e2024, #262a2e);
     border-radius: 7px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.163);
+    box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
 }
 .wrapper{
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1.5px solid #f9004d;
 }
 .wrapper .text-input{
     display: flex;
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1.5px solid #f9004d;
 }
 .text-input .to-text{
     border-radius: 0px;
-    border-left: 1px solid #ccc;
+    border-left: 1.5px solid #f9004d;
 }
 .text-input textarea{
     height: 250px;
@@ -74,9 +78,10 @@ form{
     font-size: 18px;
     padding: 10px 15px;
     border-radius: 5px;
+    color: #c4cfde;
 }
 .text-input textarea::placeholder{
-    color: #b7b6b6;
+    color: #c4cfde60;
 }
 .text-input textarea::-webkit-scrollbar{
     width: 4px;
@@ -94,14 +99,14 @@ form{
     padding: 14px;
     outline: none;
     border: none;
-    color: #fff;
+    color: #c4cfde;
     cursor: pointer;
     margin-top: 20px;
     font-size: 17px;
     font-weight: 600;
     border-radius: 5px;
-    background: #f1b500;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    background: #f9004d;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
 }
 
 @media (max-width: 660px){

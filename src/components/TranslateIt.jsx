@@ -50,10 +50,10 @@ const TranslateIt = () => {
     return (
         <div className="full">
             <div className="micBox">
-                <p>Microphone: <span style={{ fontWeight: 'bold', color: `${listening ? '#d00000' : '#000'}` }}>{listening ? 'ON' : 'OFF'}</span></p>
+                <p>Microphone: <span style={{ fontWeight: 'bold', color: `${listening ? '#f9004d' : '#c4cfde'}` }}>{listening ? 'ON' : 'OFF'}</span></p>
                 <div
                     className="mic"
-                    style={{ color: `${listening ? '#d00000' : '#000'}`, borderColor: `${listening ? '#d00000' : '#000'}`, boxShadow: `${listening ? '0 10px 20px rgba(0, 0, 0, 0.4)' : '0 0 0 0'}` }}
+                    style={{ color: `${listening ? '#c4cfde' : '#f9004d'}`, backgroundColor: `${listening ? '#f9004d' : '#212428'}`, boxShadow: `${listening ? '0 10px 20px rgba(0, 0, 0, 0.6)' : '0 0 0 0'}` }}
                     onClick={handleClick}
                 >
                     {
