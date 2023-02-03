@@ -18,7 +18,12 @@ const TranslateIt = () => {
     const [resultText, setResultText] = useState('');
 
     const handleClick = () => {
-        SpeechRecognition.startListening();
+        if (!listening) {
+            SpeechRecognition.startListening({ continuous: true });
+        }
+        else {
+            SpeechRecognition.stopListening();
+        }
     };
 
     useEffect(() => {
@@ -51,7 +56,11 @@ const TranslateIt = () => {
                     style={{ color: `${listening ? '#d00000' : '#000'}`, borderColor: `${listening ? '#d00000' : '#000'}`, boxShadow: `${listening ? '0 10px 20px rgba(0, 0, 0, 0.4)' : '0 0 0 0'}` }}
                     onClick={handleClick}
                 >
-                    <i className="fas fa-microphone" />
+                    {
+                        listening
+                            ? <i className="fas fa-pause" />
+                            : <i className="fas fa-microphone" />
+                    }
                 </div>
             </div>
 
