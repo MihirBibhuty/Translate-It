@@ -14,7 +14,7 @@
     "react-dom": "^18.2.0",
     "react-mic": "^12.4.6",
     "react-speech-recognition": "^3.10.0",
-    "regenerator-runtime": "^0.13.11",
+    "regenerator-runtime": "^0.13.11"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "^7.19.6",
