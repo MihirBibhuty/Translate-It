@@ -14,14 +14,28 @@ body{
     padding: 0 10px;
     min-height: 100vh;
     background: #212529;
+    overflow-x: hidden;
+}
+.full{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.soundWave{
+    height: 6rem;
+    border-radius: 8px;
 }
 .micBox{
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 2.5rem;
 }
 .micBox p{
     font-size: 1.5rem;
-    margin-bottom: 2rem;
+    margin: 0.5rem 0 2rem 0;
     color: #c4cfde;
 }
 .mic{
@@ -69,13 +83,13 @@ form{
     border-left: 1.5px solid #f9004d;
 }
 .text-input textarea{
-    height: 250px;
+    height: 180px;
     width: 100%;
     border: none;
     outline: none;
     resize: none;
     background: none;
-    font-size: 18px;
+    font-size: 16px;
     padding: 10px 15px;
     border-radius: 5px;
     color: #c4cfde;
@@ -93,16 +107,36 @@ form{
     background: #ddd;
     border-radius: 8px;
 }
+.accentPrediction{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    color: #c4cfde;
+}
+.accentPrediction span{
+    font-size: 16px;
+    font-weight: 600;
+}
+.accentPrediction p:nth-child(1){
+    font-size: 18px;
+    font-weight: 600;
+}
 
+.container .buttonGroup{
+    display: flex;
+    gap: 4rem;
+}
 .container button{
     width: 100%;
-    padding: 14px;
+    padding: 12px;
     outline: none;
     border: none;
     color: #c4cfde;
     cursor: pointer;
     margin-top: 20px;
-    font-size: 17px;
+    font-size: 15px;
     font-weight: 600;
     border-radius: 5px;
     background: #f9004d;
@@ -122,6 +156,12 @@ form{
     }
     .text-input textarea{
         height: 200px;
+    }
+    .accentPrediction{
+        flex-direction: column;
+    }
+    .accentPrediction p:nth-child(1){
+        margin-bottom: 1rem;
     }
     .container button{
         padding: 13px;
