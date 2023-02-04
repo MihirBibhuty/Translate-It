@@ -63,7 +63,7 @@ const TranslateIt = () => {
     };
     const handleSave = (e) => {
         e.preventDefault();
-        setShowLoader('block');
+        setShowLoader('flex');
 
         const reader = new FileReader();
         reader.readAsDataURL(blob);
@@ -153,24 +153,22 @@ const TranslateIt = () => {
                                 value={resultText}
                             />
                         </div>
-                        <div className="accentPrediction">
-                            <p>Pronunciation Accent scores:</p>
-                            {
-                                accentScore
-                                    ? (
-                                        <>
-                                            <p>en-UK: <span>{accentScore.accent_predictions.en_UK}%</span></p>
-                                            <p>en-US: <span>{accentScore.accent_predictions.en_US}%</span></p>
-                                            <p>en-AU: <span>{accentScore.accent_predictions.en_AU}%</span></p>
-                                        </>
-                                    )
-                                    : (
-                                        <div style={{ display: `${showLoader}` }}>
-                                            <Loader />
-                                        </div>
-                                    )
-                            }
-                        </div>
+                        {
+                            accentScore
+                                ? (
+                                    <div className="accentPrediction" style={{ padding: '0.5rem 1rem' }}>
+                                        <p>Pronunciation Accent scores:</p>
+                                        <p>en-UK: <span>{accentScore.accent_predictions.en_UK}%</span></p>
+                                        <p>en-US: <span>{accentScore.accent_predictions.en_US}%</span></p>
+                                        <p>en-AU: <span>{accentScore.accent_predictions.en_AU}%</span></p>
+                                    </div>
+                                )
+                                : (
+                                    <div style={{ display: `${showLoader}`, alignItems: 'center', justifyContent: 'center', width: '100%' }}>
+                                        <Loader />
+                                    </div>
+                                )
+                        }
                     </div>
                     <div className="buttonGroup">
                         <button onClick={translateText}>Translate Text</button>
