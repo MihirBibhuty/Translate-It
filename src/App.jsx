@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import 'regenerator-runtime/runtime';
 
 import TranslateIt from './components/TranslateIt';
 
